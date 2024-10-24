@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@tannertpayne</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure your styles.css includes the font -->
+</head>
+<body style="background-image: url('vectors/pattern-randomized\ \(1\).svg'); /* Update the path as necessary */
+background-size: cover; /* Cover the entire page */
+background-repeat: no-repeat; /* Prevent repeating the image */
+background-position: center; ">
+    <header>
+        <div class="logo">@tannertpayne</div>
+        <!-- <nav>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ideas.html">Ideas</a></li>
+                <li><a href="gallery.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav> -->
+    </header>
+
+    <section id="home">
+        <h1 style="font-size: 50px;">Why keep all the <span style="text-decoration: underline; background-color: #F57C00;">ideas</span> in your head?</h1>
+        <h7>Here's some help to get it out of there:</h7>
+        <h7><a href="https://drive.google.com/file/d/1q3vhr5gNZTBwITpbJLf_Xrf2YyBzTKqI/view?usp=sharing" target="_blank"><span style="color: rgb(40, 101, 246); text-decoration: underline; text-decoration-color: rgb(40, 101, 246);">FREE Website in 7 Days</span></a></h7>
+    </section>    
+
+    <section id="ideas">
+        <h2 style="text-align: center;">Ideas**</h2>
+        <h6>**I will personally send you a FREE Custom 2-Year Business Roadmap" to kickstart your idea.</h6>
+            <form class="container" method="post" action="" name="contact-form" id="idea-form">
+                <textarea id="idea" type="text" name="your-idea" rows="4" placeholder="What's your idea? Share it here." required></textarea>
+                <input id="name" type="text" name="your-name" placeholder="First name, plz." required>
+                <input id="email" type="email" name="your-email" placeholder="Email (only cuz corporate insists)." required>
+                <button type="submit" value="Submit" id="submit" class="btn" onclick="message()">SUBMIT MY IDEA</button>
+                <div class="message">
+                    <div class="success" id="success">Your message successfully sent!</div>
+                    <div class="danger" id="danger">Feilds can't be empty!</div>
+                </div>
+            </form>
+    </section>
+    
+    <!-- <dialog id="customModal">
+        <dialog class="modal" id="popup">
+            <span class="close" style="cursor: pointer;">&times;</span>
+            <h3>That's a sweet idea! Keep them coming!</h3>
+            <h4>Stay tuned to receive your "Custom 2-Year Business Roadmap" via email.</h4>
+        </dialog>
+    </dialog>       -->
+    <script src="script.js"></script>
+    <script src="google.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+@font-face {
+    font-family: 'Darker Grotesque';
+    src: url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #262626;
+}
+
+body {
+    body {
+        font-family: 'Darker Grotesque', sans-serif;
+        background-image: url('vectors/pattern-randomized.svg'); /* Update the path as necessary */
+        background-size: cover; /* Cover the entire page */
+        background-repeat: no-repeat; /* Prevent repeating the image */
+        background-position: center; /* Center the image */
+        color: #262626; /* Text color */
+        line-height: 1.6;
+        padding: 20px;
+        transition: all 0.3s ease;
+    }
+    /* background-image: url('vectors/white-canyon-6c5d2a4c.jpg'); /* Update the path as necessary */
+    /* background-size: cover; /* Cover the entire page */
+    /* background-repeat: no-repeat; /* Prevent repeating the image */
+    /* background-position: center; */
+}
+
+/* Container Styling */
+.container {
+    background-color: #DFF2FF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 30px auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    background-color: #DFF2FF; /* Match the container background color */
+    border: 2px solid #DFF2FF; /* Match the container background color */
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: none; /* Remove any box shadow */
+}
+
+::placeholder {
+    color: #262626;
+}
+
+button {
+    background-color: #F57C00;
+    color: #262626;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Darker Grotesque', sans-serif;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #F57C00;
+    color: white;
+}
+
+/* Optional: Add focus styles to maintain visibility */
+input:focus, textarea:focus {
+    border-color: #F57C00; /* Change border color on focus for visibility */
+    outline: none; /* Remove default outline */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    background-color: rgba(108, 117, 125, 0.5); 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+header.scrolled {
+    background-color: #F57C00;
+}
+
+
+.logo {
+    font-family: 'Darker Grotesque', sans-serif;
+    color: #262626; /* Secondary color */
+    font-size: 28px;
+    text-decoration: none;
+    margin: auto;
+    font-weight: 1000; /* Same weight as h1 */
+}
+
+nav .menu-icon {
+    font-size: 28px;
+    color: #262626; /* Accent color */
+    cursor: pointer;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: #262626; /* Accent color */
+    text-decoration: none;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #F57C00; /* Secondary color */
+}
+h6 {
+    text-align: center;
+    font-size: larger;
+    width: 40%;
+    margin: auto;
+}
+
+h7 {
+    text-align: center;
+    font-size: larger;
+    width: 40%;
+}
+
+/* Mobile Navigation */
+@media (max-width: 750px) {
+    header {
+        backdrop-filter: blur(10px);
+        background-color: rgb(196, 196, 196); /* Ensure blur effect is applied on mobile */
+    }
+    h6 {
+        width: 80%;
+    }
+    h7 {
+        text-align: left;
+        font-size: larger;
+        width: 100%;
+        margin-left: 0;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #DFF2FF; /* Primary dark green */
+        padding: 20px 0;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* Sections */
+section {
+    padding: 50px 0px 50px;
+    max-width: 3000;
+    margin: auto;
+    text-align: center;
+    color: rgb(0, 0, 0, .0); /* Accent color */
+}
+
+section#home {
+    background-color: rgb(0, 0, 0, .0);/* Primary dark green */
+    color: #262626; /* Accent color */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: fill-content;
+}
+h1 {
+    max-width: auto;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+    margin-top: 30vh;
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    color: #262626;
+}
+h2 {
+    max-width: auto;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    color: #262626;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 10px auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+}
+
+input, textarea {
+    background-color: white; /* Light accent color */
+    border: 2px solid black; /* Accent color */
+}
+
+::placeholder {
+    color: black;
+}
+
+button {
+    background-color: black; /* Secondary color */
+    color: white;
+    border-color: white; /* Light accent color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+button:hover {
+    background-color: #262626; /* Accent color */
+    color: white;
+}
+
+/* Ideas Page */
+#ideas {
+    background-color: rgb(0, 0, 0, .0); /* Primary dark green */
+}
+
+.ideas-display {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.idea {
+    background-color: white; /* Accent color */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.thumbs {
+    display: flex;
+    gap: 20px;
+}
+
+.thumbs span {
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.thumbs span:hover {
+    transform: scale(1.2);
+}
+
+/* Projects Page */
+#projects {
+    background-color: #6C757D; /* Primary dark green */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(70%);
+}
+
+/* About Me Page */
+#about {
+    background-color: #002400; /* Primary dark green */
+    padding: 100px 20px 60px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+p {
+    max-width: 50%;
+    font-family: 'Darker Grotesque', sans-serif;
+    margin-bottom: 20px;
+    margin-left: -50%;
+    line-height: 1.8;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* The Modal (background) */
+/*
+#customModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal {
+    width: 400px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 30px;
+    border: 2px solid #DFF2FF;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 90%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal h3 {
+    margin-top: 10px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
+    color: #F57C00;
+}
+
+.modal h4 {
+    margin-top: 10px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: -10px;
+    margin-top: -18px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #555;
+    text-decoration: none;
+}*/
+
+  body {
+    font-family: 'Darker Grotesque', sans-serif; /* Change to your chosen font */
+    color: #333; /* Darker text color */
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.message .success{
+    font-size: 16px;
+    color: white;
+    background-color: #003d00;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 16px;
+    background-color: #F57C00;
+    color: #262626;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+
+/*
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+*/
